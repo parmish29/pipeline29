@@ -1,0 +1,12 @@
+name: Run Python Script
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # Har 5 minute me chalega
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run script
+        run: python stock89.py 
